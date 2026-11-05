@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="وب‌سایت معرفی PHOENIX STUDIO؛ گروهی برای ساخت بازی‌ها و تجربه‌های سرگرم‌کننده.">
+  <title>PHOENIX STUDIO | خانه فینیکس</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #121e30;
+      --panel2: #17263b;
+      --text: #f4f7fb;
+      --muted: #a9b8cc;
+      --accent: #65d6ff;
+      --accent2: #9a8cff;
+      --line: rgba(255,255,255,.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse at 12% 5%, rgba(101,214,255,.13), transparent 32rem),
+        radial-gradient(ellipse at 90% 30%, rgba(154,140,255,.12), transparent 30rem),
+        var(--bg);
+      font-family: Tahoma, "Segoe UI", sans-serif;
+      line-height: 1.9;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1040px, calc(100% - 32px)); margin: auto; }
+    header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 18px; padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: .5px; }
+    .brand-mark {
+      width: 42px; height: 42px; display: grid; place-items: center;
+      border-radius: 14px; color: #07111f; font-size: 22px; font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 8px 28px rgba(101,214,255,.18);
+    }
+    nav { display: flex; gap: 18px; color: var(--muted); font-size: 14px; }
+    nav a:hover { color: var(--accent); }
+    .hero {
+      display: grid; grid-template-columns: 1.3fr .7fr; align-items: center;
+      gap: 38px; padding: 76px 0 64px;
+    }
+    .eyebrow { color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: 2px; }
+    h1 { margin: 8px 0 14px; font-size: clamp(34px, 6vw, 58px); line-height: 1.25; }
+    .gradient { background: linear-gradient(90deg, var(--accent), #b5a9ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { color: var(--muted); max-width: 620px; margin: 0 0 25px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 18px; border-radius: 12px; font-weight: 700; font-size: 14px;
+      border: 1px solid var(--line); transition: .2s ease;
+    }
+    .btn.primary { color: #07111f; background: linear-gradient(100deg, var(--accent), #a9a0ff); border: 0; }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+    .profile-card {
+      min-height: 290px; padding: 26px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      border: 1px solid var(--line); border-radius: 28px;
+      background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+      box-shadow: 0 22px 70px rgba(0,0,0,.22);
+    }
+    .profile {
+      width: 150px; height: 150px; object-fit: cover; border-radius: 30px;
+      border: 2px solid rgba(101,214,255,.55); background: var(--panel2);
+      box-shadow: 0 12px 35px rgba(101,214,255,.12);
+    }
+    .profile-note { color: var(--muted); font-size: 12px; margin-top: 12px; }
+    section { padding: 28px 0 42px; }
+    .section-title { margin: 0 0 8px; font-size: 25px; }
+    .section-desc { margin: 0 0 20px; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .card {
+      padding: 21px; border: 1px solid var(--line); border-radius: 18px;
+      background: rgba(18,30,48,.82);
+    }
+    .card .icon { font-size: 25px; }
+    .card h3 { margin: 7px 0 5px; font-size: 17px; }
+    .card p { color: var(--muted); margin: 0; font-size: 14px; }
+    .contact {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      padding: 25px; border: 1px solid var(--line); border-radius: 22px;
+      background: linear-gradient(110deg, rgba(101,214,255,.10), rgba(154,140,255,.10));
+    }
+    .contact p { color: var(--muted); margin: 4px 0 0; }
+    footer {
+      margin-top: 34px; padding: 22px 0 30px; color: var(--muted);
+      border-top: 1px solid var(--line); text-align: center; font-size: 12px;
+    }
+    @media (max-width: 720px) {
+      header { align-items: flex-start; flex-direction: column; }
+      nav { flex-wrap: wrap; gap: 12px; }
+      .hero { grid-template-columns: 1fr; padding: 48px 0 38px; gap: 24px; }
+      .profile-card { min-height: 240px; }
+      .grid { grid-template-columns: 1fr; }
+      .contact { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#home" aria-label="صفحه نخست">
+        <span class="brand-mark">✦</span>
+        <span>PHOENIX STUDIO</span>
+      </a>
+      <nav aria-label="پیمایش اصلی">
+        <a href="#about">درباره ما</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#contact">ارتباط با ما</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">CREATE • PLAY • EXPLORE</div>
+          <h1>به خانه <span class="gradient">فینیکس</span> خوش آمدید</h1>
+          <p class="lead">
+            ما در PHOENIX STUDIO به ساخت بازی‌ها و تجربه‌های دیجیتال سرگرم‌کننده علاقه‌مندیم.
+            هدف ما ساخت آثاری باکیفیت، خلاقانه و به‌یادماندنی است.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="https://rubika.ir/joinc/FHDAEEGG0ONGMIPVCYQNBULLUOKADLOD" target="_blank" rel="noopener noreferrer">ورود به کانال روبیکا ↗</a>
+            <a class="btn" href="mailto:PHOENIX1STUDIO1@gmail.com?subject=پیام%20به%20PHOENIX%20STUDIO">ارتباط با پشتیبانی</a>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <!-- تصویر خودت را با نام profile.png در کنار همین فایل index.html قرار بده -->
+          <img class="profile" src="profile.png" alt="نشان PHOENIX STUDIO"
+               onerror="this.style.display='none'; document.getElementById('imageFallback').style.display='grid';">
+          <div id="imageFallback" style="display:none;place-items:center;width:150px;height:150px;border-radius:30px;background:#17263b;border:1px solid rgba(101,214,255,.5);font-size:52px;color:#65d6ff;">✦</div>
+          <strong style="margin-top:15px;">PHOENIX STUDIO</strong>
+          <span class="profile-note">استودیو بازی‌سازی فینیکس</span>
+        </div>
+      </div>
+
+      <section id="about">
+        <h2 class="section-title">درباره استودیو</h2>
+        <p class="section-desc">یک گروه خلاق با علاقه به بازی‌سازی، یادگیری و ساخت تجربه‌های تازه.</p>
+        <div class="card">
+          PHOENIX STUDIO با همکاری اعضای خود تلاش می‌کند بازی‌هایی سرگرم‌کننده و باکیفیت بسازد.
+          ما به خلاقیت، همکاری تیمی و بهترشدن در هر پروژه اهمیت می‌دهیم.
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title">پروژه‌های ما</h2>
+        <p class="section-desc">برخی از پروژه‌های استودیو در دست ساخت یا توسعه هستند.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="icon">🎲</div>
+            <h3>PHOENIX Snakes & Ladders</h3>
+            <p>بازی مار و پله با حال‌وهوای فینیکس.</p>
+          </article>
+          <article class="card">
+            <div class="icon">♟️</div>
+            <h3>MENCHI LAND</h3>
+            <p>تجربه‌ای چندنفره از بازی منچ.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚀</div>
+            <h3>پروژه‌های آینده</h3>
+            <p>ایده‌های تازه در مسیر ساخت و آزمایش.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="contact">
+          <div>
+            <h2 class="section-title">با ما در ارتباط باشید</h2>
+            <p>برای پشتیبانی، پیشنهادها و همکاری با ما پیام بفرستید.</p>
+            <p dir="ltr" style="font-size:13px;">PHOENIX1STUDIO1@gmail.com</p>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:PHOENIX1STUDIO1@gmail.com?subject=پشتیبانی%20PHOENIX%20STUDIO">ایمیل پشتیبانی</a>
+            <a class="btn" href="https://rubika.ir/joinc/FHDAEEGG0ONGMIPVCYQNBULLUOKADLOD" target="_blank" rel="noopener noreferrer">کانال روبیکا</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> PHOENIX STUDIO — همه حقوق برای استودیو محفوظ است.
+      <div style="margin-top:5px;">ساخته‌شده با علاقه به بازی‌سازی 🦅</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
